@@ -15,6 +15,7 @@
 void	eating(t_s3 *m3)
 {
 	pthread_mutex_lock(m3->fork.right);
+	print_msg(m3, "has taken a fork");
 	pthread_mutex_lock(m3->fork.left);
 	print_msg(m3, "has taken a fork");
 	print_msg(m3, "is eating");
