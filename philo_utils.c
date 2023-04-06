@@ -67,7 +67,7 @@ int	meals_completed(t_s3 *m3)
 	{
 		pthread_mutex_lock(&m3[i].status);
 		if (m3[i].meals == m3->args.num_of_times_each_philo_must_eat)
-			meals++;
+			m3->args.num_of_times_each_philo_must_eat++;
 		pthread_mutex_unlock(&m3[i].status);
 		i++;
 	}

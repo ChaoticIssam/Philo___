@@ -36,7 +36,7 @@ void	create_threads(t_s3	*m3)
 	while (i < m3->args.num_of_philo)
 	{
 		pthread_create(&m3[i].philo, NULL, routine, &m3[i]);
-		my_usleep(100);
+		usleep(100);
 		i++;
 	}
 
@@ -49,7 +49,7 @@ void	mutex_init(pthread_mutex_t *forks, int philo_num)
 	i = 0;
 	while (i < philo_num)
 	{
-		if (pthread_mutex_init(&forks[i], NULL))
+		if (pthread_mutex_init(&(forks[i]), NULL))
 			printf("failed\n");
 		i++;
 	}
@@ -102,7 +102,7 @@ int	main(int ac, char **av)
 	int i = 0;
 
 	begin = get_time(0);
-	if ((ac != 6 && ac != 5) || !check(av) || !args_check(av))
+	if ((ac != 6 && ac != 5) || !int_check(av) || !args_check(av))
 	{
 		error_msg("Check your arguments\n", 21, 1);
 		return (1);

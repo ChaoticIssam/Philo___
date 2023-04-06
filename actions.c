@@ -23,7 +23,7 @@ void	eating(t_s3 *m3)
 	m3->last_meal = get_time(0);
 	m3->meals++;
 	pthread_mutex_unlock(&m3->status);
-	time_to_sleep(m3->args.time_to_sleep);
+	time_to_sleep(m3->args.time_to_eat);
 	pthread_mutex_unlock(m3->fork.right);
 	pthread_mutex_unlock(m3->fork.left);
 }

@@ -67,19 +67,10 @@ void	time_to_sleep(int sleep_time)
 	gettimeofday(&start, NULL);
 	while (1)
 	{
-		my_usleep(100);
+		usleep(100);
 		gettimeofday(&end, NULL);
 		if (((end.tv_sec * 1000) + (end.tv_usec / 1000)) - ((start.tv_sec
 					* 1000) + (start.tv_usec / 1000)) >= sleep_time)
 			break ;
 	}
-}
-
-void	my_usleep(time_t t)
-{
-	time_t i;
-
-	i = get_time(0);
-	while (get_time(0) - i < t)
-		usleep(100);
 }
