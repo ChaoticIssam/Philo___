@@ -1,4 +1,4 @@
-# Philo___
+# Philosophers
 
 A really helpfull definition of threads (based on OpenAi resources):
 
