@@ -10,3 +10,7 @@ Each thread has its own program counter, stack, and registers, which enables it 
 Threads can be used to perform parallel processing and improve the overall performance of an application.
 
 In C, threads are implemented using a set of library functions that allow the programmer to create, start, stop, and manage threads. These functions are typically included in the "pthread.h" header file and are part of the POSIX (Portable Operating System Interface) standard.
+
+# Mutex
+
+In C, a mutex (short for "mutual exclusion") is a synchronization mechanism that is used to protect shared resources from concurrent access by multiple threads or processes. A mutex is essentially a lock that can be acquired by a thread or process, allowing exclusive access to a shared resource, and released when the resource is no longer needed.
